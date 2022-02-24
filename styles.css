@@ -43,18 +43,22 @@ body {
   color: var(--neon-green);
   text-transform: uppercase;
   letter-spacing: 4px;
+  font-size: 16px;
 }
 
 .container .advice {
   font-size: var(--quote-size);
   text-align: center;
   width: 80%;
+  margin: 20px 0;
 }
 
 .splitter {
   background: url("./images/pattern-divider-desktop.svg") no-repeat center
     center/cover;
   height: 10px;
+  width: 80%;
+  margin: 20px 0;
 }
 
 .dice-container {
