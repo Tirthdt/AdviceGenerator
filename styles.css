@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  font-size: 16px;
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --d-grayish-blue: hsl(217, 19%, 24%);
+  --quote-size: 28px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #202632;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  color: var(--light-cyan);
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  width: 500px;
+  padding: 2rem 1.5rem;
+  background-color: var(--d-grayish-blue);
+  min-height: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container h2 {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.container .advice {
+  font-size: var(--quote-size);
+  text-align: center;
+  width: 80%;
+}
+
+.splitter {
+  background: url("./images/pattern-divider-desktop.svg") no-repeat center
+    center/cover;
+  height: 10px;
+}
+
+.dice-container {
+  position: absolute;
+  cursor: pointer;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 60px;
+  display: grid;
+  align-items: center;
+  background-color: var(--neon-green);
+  bottom: -10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+}
+
+.dice-loading {
+  -webkit-animation: loading 2s linear infinite;
+  -moz-animation: loading 2s linear infinite;
+}
+
+.dice-container:hover {
+  box-shadow: 0 10px 25px var(--neon-green);
+}
+
+.dice {
+  height: 30px;
+  width: 30px;
+  background: url("./images/icon-dice.svg") no-repeat center center/cover;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes loading {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90vw;
+  }
+
+  .container h2 {
+    font-size: 14px;
+  }
+}
